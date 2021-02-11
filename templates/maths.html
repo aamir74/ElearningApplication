@@ -44,11 +44,13 @@
       <h2>{{video.name}}</h2>
     </div>
     {% endfor %}
+    {% if user.is_authenticated %}
     <div class='psoft'>
         <a href="uvideo" class='box soft'>
           <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i><br> Add Video</h2>
         </a>
     </div>
+    {% endif %}
   </div>
 
   <script>
