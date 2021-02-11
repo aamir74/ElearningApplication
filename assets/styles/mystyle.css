@@ -1,0 +1,267 @@
+
+
+body{
+  background-color: whitesmoke;
+ 
+  background-image: white;
+}
+
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+padding:15 10px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  font-variant: normal;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px 20px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.contact{
+  margin-right:70px;
+
+}
+.topnav a.log{
+  margin-left:40px;
+
+}
+
+
+
+
+.topnav a.title{
+font-size:36px;
+background-color:#2196F3;
+color: aliceblue;
+}
+
+
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 65%;
+  height:70%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+  height:80%;
+  width:100%;
+}
+
+.container {
+text-align: center;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+margin: 0 -5px;
+padding:10 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+/*ABOUT*/
+.team img{
+  border-radius: 35%;
+}
+.team h2{
+text-align: center;
+height: 50px;
+font-size: 36px;
+background-image: linear-gradient(to bottom ,rgb(0, 195, 255), rgb(255, 255, 255));
+
+}
+.center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.center div.card{
+  border-radius: 30%;
+  height:400px;
+  background-color: lightgoldenrodyellow;
+}
+
+
+ /*CONTACT*/
+
+
+.form{
+  font-weight:bold;
+  align-content: center;
+  width: 350px;
+ margin-left: 490px;
+}
+
+.form:hover{
+  background-color:rgba(32, 147, 201, 0.4);
+  
+}
+
+#c {
+  font-size: 300%;
+  font-weight:bolder;
+  margin-left: 540px;
+text-decoration:underline;
+}
+
+#submit-btn{
+  font-weight:bold;
+
+}
+#l{
+  font-weight:bolder;
+  margin-left: 620px;
+text-decoration:underline;
+}
+#r{
+  font-weight:bolder;
+  margin-left: 620px;
+text-decoration:underline;
+}
+
+.register1{
+  font-weight:bold;
+  align-content: center;
+  width: 400px;
+  height:700x;
+ margin-left: 490px;
+}
+
+.register1 fieldset:hover{
+ background-color:#cacfdb;
+}
+
+#reg-btn{
+  margin-top: 50px;
+  margin-left:135px;
+  font-weight:bold;
+  height:60px;
+  width:100px; 
+
+}
+
+#reg-btn:hover{
+  background-color: #ddd;
+}
+/*samsung*/
+.rrow{
+  margin: 10px 10px 10px 10px ;
+
+}
+.ccolumn{
+  background-color: #2196F3;
+  width: 100%;
+  height:100%;
+}
+.ccolumn1 {
+  float: left;
+  width: 10%;
+  height:10%;
+  display: flex;
+
+  overflow: hidden
+}
+
+.ccolumn2 {
+  float: left;
+  width: 20%;
+  height:20%;
+  margin: 20px 200px 20px 20px;
+}
+
+#buy-btn{
+  height:60px;
+  width:100px;
+  background-color: rgba(7, 167, 33, 0.774);
+  font-weight:bold;
+  font-size: 20px;
+}
+#buy-btn:hover{
+  color:whitesmoke;
+}
+/* Clear floats after image containers */
+.rrow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.ccolumn img{
+  flex-shrink: 0;
+    min-width: 30%;
+    min-height: 60%;
+}
+
+.ccontent p{
+  float: left;
+}

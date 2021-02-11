@@ -1,0 +1,15 @@
+
+.form{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.fcolor{
+    border-radius: 25px;
+}
+
+.fcolor:hover{
+    background-color:#ccded1;
+}
+

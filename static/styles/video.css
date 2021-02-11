@@ -1,0 +1,30 @@
+.vid {
+    position: relative;
+    margin: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    padding: 1rem;
+    overflow: hidden;
+    background: white;
+  }
+
+    .videos-list {
+      list-style: none;
+      margin: 0 auto;
+      padding:0;
+      width: 90%;
+      max-width: 50rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+  .vid > div {
+    margin: 10px;
+    padding: 10px;
+    
+  }
+
+ 
+
+  

@@ -1,0 +1,75 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href='{% static "styles/all.css" %}' type="text/css">
+  <link rel="stylesheet" href='{% static "styles/navRes.css" %}' type="text/css">
+  <link rel="stylesheet" href='{% static "styles/pstyle.css" %}' type="text/css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <h1 class='ptitle'><i class="fas fa-book-reader"></i> E-LEARNING SYSTEM</h1>
+  </div>
+
+
+  <div class="topnav" id="myTopnav">
+    <a href='home1'><i class="fa fa-fw fa-home"></i> Home</a>
+    {% if user.is_authenticated %}
+    <a href='logout'><i class="fa fa-user-circle"></i> Log Out</a>
+    {% else %}
+    <a href='register'><i class="fas fa-sign-in-alt"></i> Register</a>
+    <a href='login'><i class="fa fa-user-circle"></i> Log In</a>
+    {% endif %}
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+  </div>
+  <div class='psoft'>
+    <div>
+      <a href="maths" class='box soft'>
+        <img src="{% static 'a.jpg' %}">
+      </a>
+    </div>
+    <div>
+      <a href="#" class='box soft'>
+        <img id="a" src="{% static 'e.jpg' %}"></a>
+    </div>
+    <div>
+      <a href="#" class='box soft'>
+        <h2><i class="fas fa-chalkboard-teacher"></i> Class 8</h2>
+      </a>
+    </div>
+  </div>
+
+  <div class='psoft'>
+    <div>
+      <a href="#" class='box soft'>
+        <h2><i class="fas fa-chalkboard-teacher"></i> Class 9</h2>
+      </a>
+    </div>
+    <div>
+      <a href="#" class='box soft'>
+        <h2><i class="fas fa-chalkboard-teacher"></i> Class 10</h2>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+</body>
+
+</html>

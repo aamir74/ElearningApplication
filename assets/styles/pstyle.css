@@ -1,0 +1,112 @@
+/*style the title*/
+.ptitle {
+  text-align: center;
+}
+
+
+
+/* Style the navigation bar */
+ .navbar {
+  width: 100%;
+  background-color: rgb(131, 111, 111);
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #4CAF50;
+}
+
+/* change layout when width of screen is less than 500 px*/
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+} 
+
+/*soft elements*/
+
+.box{
+  margin:40px 20px 20px 20px;
+  float: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width:300px;
+  height: 230px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+}
+.psoft{
+display: flex;
+
+align-content: center;
+  justify-content: center;
+}
+
+#tt{
+  
+  text-align: center;
+  justify-content: center;
+
+}
+
+
+.box h2{
+  font-size: 35px;
+  color:  #4CAF50;
+  
+  }
+
+  .soft {
+    border-radius: 10px;
+    box-shadow: 5px 5px 11px rgba(0,0,0,.15),
+                -5px -5px 11px rgba(255,255,255,.85);
+    }
+
+
+  .psoft a:hover{
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition-duration: 80ms;
+
+  }
+
+  @media screen and (max-width: 500px) {
+    .psoft  {
+      float: none;
+      display: block;
+    }
+  }
+
+ 
+
+
+
+
+
+

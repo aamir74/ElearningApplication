@@ -1,0 +1,63 @@
+{% load static %}
+{% static "" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "styles/uvideo.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "styles/all.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "styles/navRes.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "styles/pstyle.css" %}' type="text/css">
+
+</head>
+
+<body>
+    <div>
+        <h1 class='ptitle'><i class="fas fa-book-reader"></i> E-LEARNING SYSTEM</h1>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href='home1'><i class="fa fa-fw fa-home"></i> Home</a>
+        {% if user.is_authenticated %}
+        <a href='logout'><i class="fa fa-user-circle"></i> Log Out</a>
+        {% else %}
+        <a href='register'><i class="fas fa-sign-in-alt"></i> Register</a>
+        <a href='login'><i class="fa fa-user-circle"></i> Log In</a>
+        {% endif %}
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <h1 class='title'>Add Solutions</h1>
+    <div class='vform'>
+        <form method='post' enctype='multipart/form-data'>
+            {% csrf_token %}
+            Name:<input type='text' name='name' placeholder='name'><br>
+            Class:<input type='text' name='Class' placeholder='class'><br>
+            Subject:<input type='text' name='subject' placeholder='subject'><br>
+            <label for="video">Select video:</label>
+            <input type="file" id="vdo" name="vdo" accept="video/*"><br><br>
+            <input type="submit">
+        </form>
+    </div>
+
+    {% for message in messages %}
+    <h1> {{message}} </h1>
+    {% endfor %}
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+</body>
+</html>

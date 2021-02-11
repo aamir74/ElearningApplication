@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editable Invoice</title>
+    <link rel="stylesheet" href='{% static "purchase/css/style.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "purchase/css/print.css" %}' type="text/css" media="print">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "styles/all.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "styles/register.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "styles/pstyle.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "styles/navRes.css" %}' type="text/css">
+
+    <script type="text/javascript" language="Javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'purchase/js/example.js' %}"> </script>
+
+</head>
+
+<body>
+
+    <div>
+        <h1 class='ptitle'><i class="fas fa-book-reader"></i> E-LEARNING SYSTEM</h1>
+    </div>
+
+
+    <div class="topnav" id="myTopnav">
+        <a href='home1'><i class="fa fa-fw fa-home"></i> Home</a>
+        {% if user.is_authenticated %}
+        <a href='logout'><i class="fa fa-user-circle"></i> Log Out</a>
+        {% else %}
+        <a class="active" href='register'><i class="fas fa-sign-in-alt"></i> Register</a>
+        <a href='login'><i class="fa fa-user-circle"></i> Log In</a>
+        {% endif %}
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div>
+        <title>Register</title>
+        <br><br>
+        <section>
+            <article>
+                <form class='form' action='register' method="POST">
+                    {% csrf_token %}
+                    <fieldset class='fcolor'>
+                        <h2 style="text-align:center">Registration Form</h2> <br><br>
+                        <input type='text' name='first_name' placeholder='First name'><br><br>
+                        <input type='text' name='last_name' placeholder='Last name'><br><br>
+                        <input type='text' name='user_name' placeholder='User name'><br><br>
+                        <input type='email' name='email' placeholder='Email'><br><br>
+                        <input type='password' name='password1' placeholder='Password'><br><br>
+                        <input type='password' name='password2' placeholder='Confirm Password'><br><br><br>
+                        <input type='submit'>
+                    </fieldset>
+                </form>
+                <div>
+                    {% for message in messages %}
+                    <h1> {{message}} </h1>
+                    {% endfor %}
+                </div>
+        </section>
+        </article>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
