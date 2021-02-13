@@ -25,7 +25,7 @@ SECRET_KEY = 'j=#4-_*@9lro^cwk2!@4geb^!))(j05r80@9v^e)1r@$+lt=7p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['elearning-app-aamir.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['elearning-app-aamir.herokuapp.com','127.0.0.1','0.0.0.0']
 
 
 # Application definition
@@ -81,13 +81,13 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'abc',
-        'USER': 'postgres',
-        'PASSWORD':'root',
-        'HOST':'localhost'
+        'NAME': 'd8rms68g236aos',
+        'HOST':'ec2-54-211-77-238.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'mpghdgdbfwwmwi',
+        'PASSWORD':'36c6624de2bcac8c54080ab1200fa583300257cf1d4596c46fda3fae7f79de9d',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
