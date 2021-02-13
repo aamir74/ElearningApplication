@@ -25,7 +25,7 @@ SECRET_KEY = 'j=#4-_*@9lro^cwk2!@4geb^!))(j05r80@9v^e)1r@$+lt=7p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['elearning-app-aamir.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['elearning-app-aamir.herokuapp.com','127.0.0.1']
 
 
 # Application definition
