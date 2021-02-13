@@ -8,13 +8,12 @@ import os.path
 # Create your views here.
 
 
-
 def home1(request):
     if request.method == 'POST':
         search = request.POST['search']
 
         if video.objects.filter(name__icontains=search).exists():
-            
+
             videos = video.objects.filter(name__icontains=search)
 
             return render(request, 'search.html', {'videos': videos})
